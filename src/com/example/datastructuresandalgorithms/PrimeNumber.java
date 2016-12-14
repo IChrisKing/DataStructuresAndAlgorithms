@@ -10,11 +10,11 @@ public class PrimeNumber {
 	static public ArrayList<Integer> findPrimeNumbers(int begin,int end){
 		ArrayList<Integer> primes = new ArrayList<Integer>();
 		
-		primes = findPrime_one(begin,end);
-		printArray(primes);
+		//primes = findPrime_one(begin,end);
+		//printArray(primes);
 		
-		primes = findPrime_two(begin,end);
-		printArray(primes);
+		//primes = findPrime_two(begin,end);
+		//printArray(primes);
 		
 		primes = findPrime_three(begin,end);
 		printArray(primes);
@@ -73,7 +73,11 @@ public class PrimeNumber {
 		boolean isPrime = true;
 		for(int i=begin;i<=end;i++){
 			isPrime = true;
-			for(int j=1;j<=Math.sqrt(i);j+=2){
+			if(i == 2 || i%2 ==0){
+				isPrime = false;
+				continue;
+			}
+			for(int j=3;j<=Math.sqrt(i);j+=2){
 				if(i%j == 0){
 					isPrime = false;
 					break;
