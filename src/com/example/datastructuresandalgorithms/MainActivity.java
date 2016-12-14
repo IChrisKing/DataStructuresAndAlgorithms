@@ -16,12 +16,15 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		//二叉樹
-		BinTree();
+		//BinTree();
 		
 		//Fibonacci
-		int f1 = Fibonacci.fibonacci(10);
-		int f2 = Fibonacci.fibonacci_2(12);
-		Log.d(TAG,"f1 is " + f1 + "  f2 is " + f2);
+		//int f1 = Fibonacci.fibonacci(10);
+		//int f2 = Fibonacci.fibonacci_2(12);
+		//Log.d(TAG,"f1 is " + f1 + "  f2 is " + f2);
+		
+		//寻找素数
+		PrimeNumber.findPrimeNumbers(2, 100);
 	}
 	
 	private void BinTree(){
