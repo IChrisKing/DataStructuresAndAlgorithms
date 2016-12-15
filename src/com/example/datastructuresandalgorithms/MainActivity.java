@@ -24,7 +24,10 @@ public class MainActivity extends Activity {
 		//Log.d(TAG,"f1 is " + f1 + "  f2 is " + f2);
 		
 		//寻找素数
-		PrimeNumber.findPrimeNumbers(2, 100);
+		//PrimeNumber.findPrimeNumbers(2, 100);
+		
+		//阶乘
+		Factorial.Factorial(5);
 	}
 	
 	private void BinTree(){
