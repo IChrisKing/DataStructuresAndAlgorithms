@@ -6,9 +6,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends Activity {
 	public static String TAG = "ALGORITHMS";
+	ArrayList<Integer> arr = new ArrayList<Integer>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,12 @@ public class MainActivity extends Activity {
 		//PrimeNumber.findPrimeNumbers(2, 100);
 		
 		//阶乘
-		Factorial.Factorial(5);
+		//Factorial.Factorial(5);
+
+		//分解质因数
+		arr = PrimeFactorization.getPrimeFactorization(90);
+		printArray(arr);
+
 	}
 	
 	private void BinTree(){
@@ -44,6 +52,12 @@ public class MainActivity extends Activity {
 		binTree.delete(43);
 		//查看删除效果
 		binTree.inOrder(binTree.root);
+	}
+
+	public static void printArray(ArrayList<Integer> array){
+		for(int i=0;i<array.size();i++){
+			Log.d(TAG, array.get(i)+"");
+		}
 	}
 
 }
