@@ -33,8 +33,12 @@ public class MainActivity extends Activity {
 		//Factorial.Factorial(5);
 
 		//分解质因数
-		arr = PrimeFactorization.getPrimeFactorization(90);
-		printArray(arr);
+		//arr = PrimeFactorization.getPrimeFactorization(90);
+		//printArray(arr);
+
+		//最大公约数，最小公倍数
+		int[] intArr = new int[]{2,3,4,6,8};
+		GCDAndLCM.getGCDAndLCM(intArr);
 
 	}
 	
